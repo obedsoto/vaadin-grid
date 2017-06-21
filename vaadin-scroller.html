@@ -83,6 +83,9 @@
       content.setAttribute('slot', 'foo-bar');
       content.setAttribute('slot', slot);
 
+      // Hack to get FF render the items
+      setTimeout(this._render.bind(this), 10);
+
       return physicalItems;
     }
 
